@@ -1,0 +1,50 @@
+.unit-input-container {
+  .label {
+    margin: 4px;
+  }
+  .input {
+    margin: 4px;
+    background: hsla(168, 90%, 50%, 0.8);
+    border: 1px solid hsla(168, 90%, 50%, 0.5);
+    border-radius: 4px;
+    color: #333;
+  }
+  .inputStyle {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .neighborhood-inputs {
+    justify-content: space-evenly;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    .inputStyle {
+      background: linear-gradient(135deg, hsl(183, 32%, 37%) 0%, #06463f 100%);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      color: #ffffff;
+      padding: 10px 20px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      height: 8px;
+    }
+    .saveRect {
+      background: linear-gradient(135deg, #b7f4f4 0%, #054f51 100%);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      color: #ffffff;
+      padding: 10px 20px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+  }
+}
