@@ -50,7 +50,7 @@ body,
   margin-right: 8px;
   top: 10px;
   left: 10px;
-  width: 45%;
+  width: 55%;
   z-index: 1;
   .buttonNeighborhood {
     color: rgba(255, 255, 255, 0.85);
@@ -72,6 +72,12 @@ body,
   isometric:active {
     color: #ad5c16;
     border-color: #ad5c16;
+  }
+  .undoRect {
+    width: 60px;
+    border: 1px solid;
+    border-color: #424242;
+    border-radius: 6px;
   }
 }
 .isometric {

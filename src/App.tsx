@@ -4,6 +4,7 @@ import { Checkbox, message, Modal } from "antd";
 
 import "./App.css";
 import { defaultBuildings, defaultApartments } from "./defaultRectangles";
+import UndoIcon from "./Assest/undo_icon.png";
 
 export type Rectangle = {
   initialX: number;
@@ -766,6 +767,15 @@ function App() {
     setIsDrawing(false);
   };
 
+  const undoRect = () => {
+    if (rectMode === "neighborhood" && neighborhoodsRect.length > 0)
+      setNeighborhoodsRect((prevRect) => prevRect.slice(0, -1));
+    if (rectMode === "building" && buildingsRect.length > 0)
+      setBuildingsRect((prevRect) => prevRect.slice(0, -1));
+    if (rectMode === "apartment" && apartmentsRect.length > 0)
+      setApartmentsRect((prevRect) => prevRect.slice(0, -1));
+  };
+
   return (
     <div
       className="f"
@@ -917,6 +927,19 @@ function App() {
           }}
         >
           <strong>Add Apartment</strong>
+        </button>
+        <button
+          className="undoRect"
+          style={{
+            background: "hsl(0, 10%, 100%)",
+          }}
+          onClick={undoRect}
+        >
+          <img
+            src={UndoIcon}
+            alt="Undo Icon"
+            style={{ width: "30px", height: "30px" }}
+          />
         </button>
       </div>
       <button className="isometric" onClick={toggleViewMode}>
